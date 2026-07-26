@@ -22,7 +22,7 @@ cp prompt-refiner.md .claude/skills/
 Or clone this repo and copy the file:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/prompt-refiner-skill.git
+git clone https://github.com/Bel1eve-qiu/prompt-refiner-skill.git
 cp prompt-refiner-skill/.claude/skills/prompt-refiner.md YOUR_PROJECT/.claude/skills/
 ```
 
