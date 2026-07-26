@@ -50,14 +50,16 @@ After refining, respond to the user in Chinese with this exact format:
 
 ---
 
-Then ask the user to choose:
+Then use the AskUserQuestion tool to present the choice as an interactive selection UI (not plain text). The question should be structured as:
 
-1. 使用优化后的提示词
-2. 使用原始提示词
-3. 编辑修改优化后的提示词
+- Question: "请选择如何处理提示词？"
+- Options:
+  - Label: "使用优化后的提示词", Description: "直接使用 AI 优化后的版本执行任务"
+  - Label: "使用原始提示词", Description: "保持原样，不做任何修改"
+  - Label: "编辑修改优化后的提示词", Description: "在优化版本基础上进一步调整"
 
 Wait for the user's choice before proceeding. Based on their choice:
 
-- **Choice 1**: Execute the refined prompt as the new instruction
-- **Choice 2**: Execute the original prompt as-is
-- **Choice 3**: Ask the user what they want to modify, apply their edits, then execute the edited version
+- **使用优化后的提示词**: Execute the refined prompt as the new instruction
+- **使用原始提示词**: Execute the original prompt as-is
+- **编辑修改优化后的提示词**: Ask the user what they want to modify, apply their edits, then execute the edited version
